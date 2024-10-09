@@ -1,0 +1,100 @@
+
+/*
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}*/
+
+body {
+  /*font-family: 'Audiowide', sans-serif;*/
+  color: white;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at 3% 25%, #0b8bd0 0%, #003268 100%);
+}
+
+
+
+/*@font-face {
+  font-family: 'Audiowide'sans-serif;
+  font-style: bold;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/audiowide/v20/l7gdbjpo0cum0ckerWCdmA_OMRlABolM.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+*/
+
+p {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+h1 {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  background-color: #333;
+  padding: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+li {
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: rgb(190, 226, 29);
+}
+
