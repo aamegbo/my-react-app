@@ -4,18 +4,23 @@ import { BrowserRouter as Router, Route, Routes,  Link } from 'react-router-dom'
 import MovieList from "./components/MovieList";
 import "./App.css";
 import Navbar from './components/Navbar';
+import Home from './components/Home';
 
+//const Home = () => <div>Home</div>;
 //const MovieList = () => <div>Home Page</div>;
 const Movies = () => <div>Movie</div>;
-const Cart = () => <div>Movie</div>;
+const Cart = () => <div>Cart</div>;
 const About = () => <div>About</div>;
 
 function App() {
+  
   return (
+
     <Router>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<MovieList />} />
+        <Route path="Movielist" element={<MovieList />} />
+        <Route path="Home" element={<Home/>} />
       </Routes>
     </Router>
     
