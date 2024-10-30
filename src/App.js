@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 //import './App.css';
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import MovieList from './components/MovieList';
 import Subscriptions from './components/Data';
 import "./App.css";
@@ -14,7 +14,9 @@ const App = () => {
   const [movie, setMovies] = useState([]);
   const [cartItems, setCartItems] = useState([]);
 
-  const handleAddMovie = (movie) => {
+  
+
+  const HandleAddMovie = (movie) => {
       setMovies((prevMovies) => [...prevMovies, movie]);
   };
 
@@ -28,23 +30,25 @@ const App = () => {
       setCartItems((prevItems) => prevItems.filter(item => item !== itemToRemove));
   };
 
+
+
   //Routes all components to their import files
   return (
 
     <Router>
       <Navbar/>
       <Routes>
-        <Route path="Movielist" element={<MovieList onAddMovie={handleAddMovie} onAddToCart={handleAddToCart}/> } />
+        <Route path="Movielist" element={<MovieList onAddMovie={HandleAddMovie} onAddToCart={handleAddToCart}/> } />
         <Route path="About" element={<About />} />
-        <Route path="Movies" element={<Movie movieList={movie} />} />
+        <Route path="Movies" element={<Movie movieList={movie} handleMovieSelect/>} />
         <Route path="Cart" element={<Cart cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} />} />
       </Routes>
       <h2 className= 'Subscriptions'>Available Subscriptions</h2>
         {Subscriptions.map((item) => (
           <div key={item.id}>
-            <span>{item.name}</span>
+            <span className='Subscriptions'>{item.name}</span>
             <span>Price: ${item.price}</span>
-            <button onClick={() => handleAddToCart(item.id)}>Add to Cart</button>
+            <button className='Subscriptions' onClick={() => handleAddToCart(item.id)}>Add to Cart</button>
           </div>
         ))}
     </Router>

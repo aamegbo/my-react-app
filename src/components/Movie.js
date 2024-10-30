@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Movies = ({ movieList }) => {
 
@@ -22,6 +22,5 @@ const Movies = ({ movieList }) => {
         </div>
     );
 };
-
 
 export default Movies;

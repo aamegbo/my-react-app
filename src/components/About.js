@@ -2,7 +2,7 @@ import ReactDOM from "react-dom/client";
 
 function About() {
   return (
-    <div className= "row">
+    <div className= "flex-container">
       <div className="column.all">
         <p>About</p>
         <p>The about page</p>
