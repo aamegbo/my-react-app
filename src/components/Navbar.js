@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
-import React, { useEffect, useState } from 'react';
-
-
+import React, { useState } from 'react';
 
 const Navbar = () => {
   const [Uname, setName] = useState('');
@@ -17,18 +15,20 @@ const Navbar = () => {
     setName([...password, passwords]);
   };
 
+  //This is a function to save user information
   const saveData = (e) => {
     e.preventDefault();
     // Create an object with username and password
     const userData = { Uname, password };
     localStorage.setItem('userData', JSON.stringify(userData));
-    //localStorage.setItem('password', JSON.stringify(password));
 
     // Clear the input fields
     //setName('');
     //setPassword('');
   };
 
+  //Represents the Navbar and login feature
+  //User Persists after entry in localStorage
   return (
     <div class="topnav">
       <ul>

@@ -1,5 +1,3 @@
-//import logo from './logo.svg';
-//import './App.css';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import MovieList from './components/MovieList';
@@ -13,17 +11,8 @@ import Movie from './components/Movie';
 const App = () => {
   const [movie, setMovies] = useState([]);
   const [cartItems, setCartItems] = useState([]);
-  //const [user, setUser] = useState([]);
-  /*
-  const addUser = (customer) => {
-    setUser([...user, customer]);
-  };
-  
-  const saveData = () => {
-    localStorage.setItem('user', JSON.stringify(user));
-  };
-  */
 
+  //Handle movie picked by user
   const HandleAddMovie = (movie) => {
       setMovies((prevMovies) => [...prevMovies, movie]);
   };
@@ -38,6 +27,7 @@ const App = () => {
       setCartItems((prevItems) => prevItems.filter(item => item !== itemToRemove));
   };
 
+  //Handles movies removed from cart
   const dropMovie = (movieToRemove) => {
     setMovies((prevMovies) => prevMovies.filter( movie => movie !== movieToRemove));
     
@@ -45,16 +35,15 @@ const App = () => {
 
   //Routes all components to their import files
   return (
-
     <Router>
       <Navbar/>
       <Routes>
-        <Route path="Movielist" element={<MovieList onAddMovie={HandleAddMovie} onAddToCart={handleAddToCart}/> } />
+        <Route path="Movielist" element={<MovieList onAddMovie={HandleAddMovie} onAddToCart={handleAddToCart} />} />
         <Route path="About" element={<About />} />
         <Route path="Movies" element={<Movie movieList={movie} dropMovie={dropMovie} />} />
         <Route path="Cart" element={<Cart cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} />} />
       </Routes>
-      <h2 className= 'Subscriptions'>Available Subscriptions</h2>
+      <h2 className='Subscriptions'>Available Subscriptions</h2>
         {Subscriptions.map((item) => (
           <div key={item.id}>
             <span className='Subscriptions'>{item.name}</span>

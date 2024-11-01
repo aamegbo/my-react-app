@@ -11,6 +11,8 @@ const Movies = ({ movieList,dropMovie }) => {
         setSelectedMovie(movie);
     };
 
+    //This function accepts an api key for authetication
+    //proceeds to fetch from the target site
     const fetchMovies = async () => {
         try {
           const response = await axios.get(
@@ -23,7 +25,8 @@ const Movies = ({ movieList,dropMovie }) => {
         }
       };
     
-     
+    //Represents the movie selected by the user
+    //The commented out line Represents how the src works with an actual img path
     return (
         <div>
             <h1>Movies</h1>

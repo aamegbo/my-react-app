@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom/client";
 
+//This Represents the about page
 function About() {
   return (
     <div className= "flex-container">

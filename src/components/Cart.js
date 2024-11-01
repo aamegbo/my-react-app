@@ -1,9 +1,9 @@
 // JavaScript source code
 // src/components/Cart.js
 import React from 'react';
+
 //cartItems used to add movie items to the cart
 //onRemoveFromCart used to removed any items from the cart
-
 const Cart = ({ cartItems, onRemoveFromCart }) => {
     return (
         

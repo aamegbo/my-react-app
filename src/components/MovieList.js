@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 
-// 
+
 const MovieList = ({ onAddMovie, onAddToCart }) => {
     const [input, setInput] = useState('');
     const [streamList, setMovieList] = useState([]);
@@ -12,6 +12,7 @@ const MovieList = ({ onAddMovie, onAddToCart }) => {
         setInput(e.target.value);
     };
 
+    //This function handles the changes in the movie list
     const handleSubmit = (e) => {
         e.preventDefault();
         if (input) {
@@ -21,6 +22,7 @@ const MovieList = ({ onAddMovie, onAddToCart }) => {
         }
     };
 
+    //Prompts the user on what is picked
     const handleItemClick = (item) => {
         setSelectedEvent(`You selected: "${item}"`);
     };
