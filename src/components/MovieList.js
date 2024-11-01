@@ -1,7 +1,6 @@
-// src/components/StreamList.js 
+
+'use client';
 import React, { useState } from 'react';
-
-
 
 const MovieList = ({ onAddMovie, onAddToCart }) => {
     const [input, setInput] = useState('');

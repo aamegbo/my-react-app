@@ -1,4 +1,5 @@
-import React, { useState} from 'react';
+'use server';
+import React from 'react';
 import axios from 'axios';
 
 const Movies = ({ movieList,dropMovie }) => {

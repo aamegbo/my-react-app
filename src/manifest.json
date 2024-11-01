@@ -1,1 +1,11 @@
-{"theme_color":"#8936FF","background_color":"#2EC6FE","orientation":"any","display":"standalone","dir":"auto","lang":"en-US","name":"StreamApp","short_name":"App","start_url":"https://StApp499.com/app/home","scope":"https://StApp499.com/app","description":"Basics in stream managment"}
+{"theme_color":"#8936FF",
+    "background_color":"#2EC6FE",
+    "orientation":"any",
+    "display":"standalone",
+    "dir":"auto",
+    "lang":"en-US",
+    "name":"StreamApp",
+    "short_name":"App",
+    "start_url":"https://StApp499.com/app/home",
+    "scope":"https://StApp499.com/app",
+    "description":"Basics in stream managment"}
