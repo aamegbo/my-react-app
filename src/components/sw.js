@@ -1,5 +1,9 @@
 // sw.js
 
+navigator.serviceWorker.register(
+    '/sw.js'
+  )
+
 const CACHE_NAME = 'my-react-app';
 const FILES_TO_CACHE = [
     '/App.js',
